@@ -1,0 +1,25 @@
+{
+  "name": "tclookup",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "async": "*",
+    "coffee-script": "1.2.x",
+    "express": "2.5.x",
+    "connect-assets": "2.1.x",
+    "jade": "*",
+    "stylus": "*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "should": "*"
+  },
+  "scripts": {
+    "start": "lib/server.js"
+  },
+  "engines": {
+    "node": "0.8.x"
+  },
+  "subdomain": "tc"
+}

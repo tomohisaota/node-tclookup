@@ -1,0 +1,44 @@
+{
+  "ドコモ" : {
+    "carrierid" : "EFF10FFA-9A30-4D50-9A4B-04C2C19E1953",
+    "name" : {
+      "ja" : "ドコモ",
+      "en" : "Docomo"
+    }
+  },
+  "ＫＤＤＩ" : {
+    "carrierid" : "CAC83B8E-5C91-4FC5-8B1F-9CD8710FD566",
+    "name" : {
+      "ja" : "au",
+      "en" : "au"
+    }
+  },
+  "ソフトバンクモバイル" : {
+    "carrierid" : "043CDD94-6F49-4E5E-8439-AA60D133711C",
+    "name" : {
+      "ja" : "ソフトバンク",
+      "en" : "Softbank"
+    }
+  },
+  "ウィルコム" : {
+    "carrierid" : "077C34F0-1B87-49F7-9DF6-53A737DD481C",
+    "name" : {
+      "ja" : "ウィルコム",
+      "en" : "Willcom"
+    }
+  },
+  "イー・アクセス" : {
+    "carrierid" : "8719C64B-D6D9-489B-9F7E-5459FF8A027A",
+    "name" : {
+      "ja" : "イー・アクセス",
+      "en" : "eaccess"
+    }
+  },
+  "沖縄セルラー" : {
+    "carrierid" : "B4588B17-3F83-4C39-AE84-5F67D0BE21D7",
+    "name" : {
+      "ja" : "沖縄セルラー",
+      "en" : "oct"
+    }
+  }
+}
