@@ -1,0 +1,44 @@
+.masonry,
+.masonry .masonry-brick {
+  -webkit-transition-duration: 0.7s;
+     -moz-transition-duration: 0.7s;
+      -ms-transition-duration: 0.7s;
+       -o-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+}
+
+.masonry {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.masonry .masonry-brick {
+  -webkit-transition-property: left, right, top;
+     -moz-transition-property: left, right, top;
+      -ms-transition-property: left, right, top;
+       -o-transition-property: left, right, top;
+          transition-property: left, right, top;
+}
+
+.box {
+  border-radius: 10px;         /* CSS3 */
+  -moz-border-radius: 10px;    /* Firefox */
+  -webkit-border-radius: 10px; /* Safari,Chrome */
+
+  border: medium solid lightgray;
+  border-width: 1px;
+  background-color : white;
+  width : 200px;
+  text-align : center;
+  padding : 5px;
+  margin : 3px;
+}
+
+a.widelink {
+   display: block;
+   width: 100%;
+   text-decoration: none;
+}

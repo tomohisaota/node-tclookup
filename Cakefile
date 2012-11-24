@@ -20,6 +20,9 @@ task 'start', 'Start the app', ->
 task 'stop', 'Stop the app', ->
   run 'forever', ['stop',"#{__dirname}/lib/server.js"]
 
+task 'log', 'Tail forever log', ->
+  run 'tail', ['-n','200','-f',"#{__dirname}/log/forever.log"]
+
 option "-g","--grep [exp]","Regex for unit test"
 
 task 'test', 'Run mocha tests', (options)->

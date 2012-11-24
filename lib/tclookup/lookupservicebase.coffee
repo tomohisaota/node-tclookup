@@ -27,7 +27,7 @@ module.exports.LookupServiceBase = class
     @minlength = Math.min(code.length,@minlength)
     @maxlength = Math.max(code.length,@maxlength)
     
-  opLookup :(internationalNumber)=>
+  opLookupNumber :(internationalNumber)=>
     return (cb)=>
       unless(@isTarget(@countryCodeStr))
         return cb()
@@ -39,11 +39,60 @@ module.exports.LookupServiceBase = class
         subnumber = number.substring(0,matchLength)
         carrierId = @numberDict[subnumber]
         if(carrierId)
-          result = {
-            countrycode : @countryCode
-            carrier : @carrierDict[carrierId]
-          }
+          # clone. Sorry for lazy impl :-)
+          result = JSON.parse(JSON.stringify(@carrierDict[carrierId]))
           return cb(null,result)
+      return cb()
+
+  opLookupCountry :(countrycode)=>
+    return (cb)=>
+      if(countrycode != @countryCode)
+        return cb()
+      result = {
+        countrycode : @countryCode
+        countrycodeRef : @countryCode
+      }
+      result.info = {
+        
+      }
+      carriers = {}
+      for carrierid,carrier of @carrierDict
+        carriers[carrierid] = {
+          carrierid : carrierid
+        }
+      result.refs = {}
+      result.refs.carriers = carriers
+      return cb(null,result)
+
+  opLookupCarrier :(carrierid)=>
+    return (cb)=>
+      handler = (carrierid,carrier,cb)=>
+        result = {
+          carrierid : carrierid
+          carrieridRef : carrierid
+        }
+        result.info = {
+          name : carrier.name
+        }
+        result.refs = {}
+        result.refs.countries = {}
+        result.refs.countries[@countryCode]={
+          countrycode : @countryCode
+          countrycodeRef : @countryCode
+        }
+        result.refs.numbers = {}
+        for key,value of @numberDict
+          continue if(carrierid != value)
+          internationalNumber = @toInternationalNumber(key)
+          result.refs.numbers[internationalNumber]={
+            number : internationalNumber
+            numberRef : internationalNumber
+          }
+        return cb(null,result)
+        
+      for key,value of @carrierDict
+        if(key == carrierid)
+          return handler(key,value,cb)
       return cb()
 
   initCarrier :(cb)=>
@@ -53,4 +102,7 @@ module.exports.LookupServiceBase = class
     throw new Error("Abstract method")
 
   toLocalNumber : (internationalNumber)=>
+    throw new Error("Abstract method")
+
+  toInternationalNumber : (localNumber)=>
     throw new Error("Abstract method")

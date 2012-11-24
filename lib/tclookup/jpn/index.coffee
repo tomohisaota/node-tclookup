@@ -33,4 +33,7 @@ class JapanLookupService extends LookupServiceBase
   toLocalNumber : (internationalNumber)=>
     return "0"+internationalNumber.substring(@countryCodeStr.length)
         
+  toInternationalNumber : (localNumber)=>
+    return @countryCodeStr+localNumber.substring(1)
+
 module.exports = new JapanLookupService()

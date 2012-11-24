@@ -4,6 +4,11 @@
     "name" : {
       "ja" : "ドコモ",
       "en" : "Docomo"
+    },
+    "countries" : {
+      "81" : {
+        "countrycode" : 81
+      }
     }
   },
   "ＫＤＤＩ" : {
@@ -11,6 +16,11 @@
     "name" : {
       "ja" : "au",
       "en" : "au"
+    },
+    "countries" : {
+      "81" : {
+        "countrycode" : 81
+      }
     }
   },
   "ソフトバンクモバイル" : {
@@ -18,6 +28,11 @@
     "name" : {
       "ja" : "ソフトバンク",
       "en" : "Softbank"
+    },
+    "countries" : {
+      "81" : {
+        "countrycode" : 81
+      }
     }
   },
   "ウィルコム" : {
@@ -25,6 +40,11 @@
     "name" : {
       "ja" : "ウィルコム",
       "en" : "Willcom"
+    },
+    "countries" : {
+      "81" : {
+        "countrycode" : 81
+      }
     }
   },
   "イー・アクセス" : {
@@ -32,6 +52,11 @@
     "name" : {
       "ja" : "イー・アクセス",
       "en" : "eaccess"
+    },
+    "countries" : {
+      "81" : {
+        "countrycode" : 81
+      }
     }
   },
   "沖縄セルラー" : {
@@ -39,6 +64,11 @@
     "name" : {
       "ja" : "沖縄セルラー",
       "en" : "oct"
+    },
+    "countries" : {
+      "81" : {
+        "countrycode" : 81
+      }
     }
   }
 }
